@@ -23,7 +23,8 @@ Highcharts.setOptions({
 document.addEventListener('DOMContentLoaded', function () {
     const myChart = Highcharts.chart('chart-container', {
         chart: {
-            type: 'bar',
+            type: 'columnrange',
+            inverted: true,
             styledMode: true,
             spacingBottom: 25,
             spacingRight: 100
@@ -32,12 +33,12 @@ document.addEventListener('DOMContentLoaded', function () {
             text: null
         },
         data: {
-            googleSpreadsheetKey: '1YOKb5l2VM4aAB2r20N_1aT_1vEajYrP3U-U3A6lZbC0'
+            googleSpreadsheetKey: '17sDzFjvWay61kD9Ay2ucGskx2zj21wuDCEU65uDSMJ0'
         },
         // for bar charts only
         plotOptions: {
             series: {
-                groupPadding: 0.1
+                groupPadding: 0.3
             } 
         },
         // for line charts only
@@ -58,11 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
         //     }
         // },
         legend: {
-            align: 'right',
-            symbolRadius: 0,
-            verticalAlign: 'top',
-            x: 10,
-            itemMarginTop: -10
+            enabled: false
         },
         xAxis: {
             labels: {
